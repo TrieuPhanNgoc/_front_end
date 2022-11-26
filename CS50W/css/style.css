@@ -1,4 +1,10 @@
-h1 {
+/* Using id */
+#head_1, #head_2 {
     color:blue;
     text-align: center;
+}
+
+/* Using class */
+.yeah {
+    color: aqua
 }
