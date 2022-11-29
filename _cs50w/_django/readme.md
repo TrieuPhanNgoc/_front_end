@@ -2,4 +2,4 @@
 > django-admin startproject PROJECT_NAME
 
 #### syntax: creating new application on project
-> python manage.py start app APPLICATION_NAME
+> python manage.py startapp APPLICATION_NAME
