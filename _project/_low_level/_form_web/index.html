@@ -53,9 +53,9 @@
         }
 
         .framework {
-            position: absolute;
-            padding: 20px;
-            margin: 80px;
+            position: relative;
+            /* transform: translate(30%, 0); */
+            margin: 90px;
             background-color: #fefffa;
         }
 
@@ -74,31 +74,30 @@
             width: inherit;
         }
 
-        .topic {
-            border-top: 2rem;
-            border-top: black;
-        }
-
-        #button_languages,#button_works,#button_points {
-            border:none;
+        #button_languages,
+        #button_works,
+        #button_points {
+            border: none;
             color: #ff6c77;
             letter-spacing: 1px;
             background: none;
             position: relative;
-            left:-10px;
+            left: -10px;
             font-size: 30px;
         }
 
-
-        
-
-        p {
-            letter-spacing: 1px
-        }
-
         .collapse {
-            color: none;
+            position: relative;
+            top: -20px;
+            border: none;
+            color: #9ca7af;
+            height: 100px;
         }
+
+        .context_frame {
+            padding: 20px;
+        }
+
     </style>
 </head>
 
@@ -110,55 +109,64 @@
                 <div class="line_upper"></div>
             </div>
         </div>
-        <h1 class="title">CSS + HTML ONLY ACCORDION ELEMENT </h1>
 
         <div class="context_frame">
             <!-- Languages Used button -->
+            <h1 class="title">CSS + HTML ONLY ACCORDION ELEMENT </h1>
+            <hr>
             <p>
                 <button id="button_languages" class="btn btn-primary" type="button" data-bs-toggle="collapse"
                     data-bs-target="#content_languages" aria-expanded="false"
                     aria-controls="content_languages">Languages Used</button>
-            <div class="collapse" id="content_languages">
-                <div class="card card-body">
-                    This page was written in HTML and CSS.
-                    The CSS was compiled from SASS.
-                    I used Normalize as my CSS reset and -prefix-free to save myself some headaches.
-                    I haven't quite gotten the hang of Slim for compiling into HTML,
-                    but someday I'll use it since its syntax compliments that of SASS.
-                    Regardless, this could all be done in plain HTML and CSS.
+                
+                <!-- <div></div> -->
+
+                <div class="collapse" id="content_languages">
+                    <div>
+                        This page was written in HTML and CSS.
+                        The CSS was compiled from SASS.
+                        I used Normalize as my CSS reset and -prefix-free to save myself some headaches.
+                        I haven't quite gotten the hang of Slim for compiling into HTML,
+                        but someday I'll use it since its syntax compliments that of SASS.
+                        Regardless, this could all be done in plain HTML and CSS.
+                    </div>
                 </div>
-            </div>
             </p>
+            
 
             <!-- How It Works button -->
+            <hr>
             <p>
-                <button id="button_works" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#context_works"
-                    aria-expanded="false" aria-controls="context_works">How
+                <button id="button_works" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#context_works" aria-expanded="false" aria-controls="context_works">How
                     It Works</button>
-            <div class="collapse" id="context_works">
-                <div class="card card-body">
-                    Using the sibling and checked selectors,
-                    we can determine the styling of sibling elements based on
-                    the checked state of the checkbox input element.
-                    One use, as demonstrated here, is an entirely CSS and HTML accordion element.
-                    Media queries are used to make the element responsive to different screen sizes.
+                
+                <div class="collapse" id="context_works">
+                    <div>
+                        Using the sibling and checked selectors,
+                        we can determine the styling of sibling elements based on
+                        the checked state of the checkbox input element.
+                        One use, as demonstrated here, is an entirely CSS and HTML accordion element.
+                        Media queries are used to make the element responsive to different screen sizes.
+                    </div>
                 </div>
-            </div>
             </p>
 
             <!-- Points of Interest button -->
+            <hr>
             <p>
-                <button id="button_points" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#context_points"
-                    aria-expanded="false" aria-controls="context_points">Points of Interest</button>
-            <div class="collapse" id="context_points">
-                <div class="card card-body">
-                    By making the open state default for when :checked isn't detected,
-                    we can make this system accessable for browsers that don't recognize :checked.
-                    The fallback is simply an open accordion.
-                    The accordion can be manipulated with Javascript (if needed)
-                    by changing the "checked" property of the input element.
+                <button id="button_points" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#context_points" aria-expanded="false" aria-controls="context_points">Points of
+                    Interest</button>
+                <div class="collapse" id="context_points">
+                    <div>
+                        By making the open state default for when :checked isn't detected,
+                        we can make this system accessable for browsers that don't recognize :checked.
+                        The fallback is simply an open accordion.
+                        The accordion can be manipulated with Javascript (if needed)
+                        by changing the "checked" property of the input element.
+                    </div>
                 </div>
-            </div>
             </p>
         </div>
     </div>
