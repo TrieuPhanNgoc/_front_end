@@ -1,11 +1,15 @@
 ul {
   font-size: 14px;
-  color: green; }
+  color: green;
+}
 
 ol {
   font-size: 18px;
-  color: green; }
-  ol li {
-    color: black; }
+  color: green;
+}
+
+ol li {
+  color: black;
+}
 
 /*# sourceMappingURL=variables.css.map */
